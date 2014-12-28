@@ -1,0 +1,30 @@
+﻿<chart showLabels='1' showvalues='0' decimals='0' showBorder="0" formatNumberScale='0' >
+  <categories>
+    <category label='展示类广告' />
+    <category label='客户网站' />
+    <category label='付费搜索' />
+    <category label='电子邮件' />
+    <category label='社交' />
+  </categories>
+  <dataset seriesName='media plan 1' color='AFD8F8' showValues='0'>
+    <set value='5000' />
+    <set value='4000' />
+    <set value='4200' />
+    <set value='4000' />
+    <set value='4200' />
+  </dataset>
+  <dataset seriesName='media plan 2' color='F6BD0F' showValues='0'>
+    <set value='2400' />
+    <set value='3400' />
+    <set value='2600' />
+    <set value='4000' />
+    <set value='4200' />
+  </dataset>
+  <dataset seriesName='media plan 3' color='8BBA00' showValues='0'>
+    <set value='45000.65' />
+    <set value='44835.76' />
+    <set value='18722.18' />
+    <set value='4000' />
+    <set value='4200' />
+  </dataset>
+</chart>

@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pmsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="pmsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="action" EntityType="pmsModel.action" />
+    <EntitySet Name="actiongroup" EntityType="pmsModel.actiongroup" />
+    <EntitySet Name="actiongroupdetail" EntityType="pmsModel.actiongroupdetail" />
+    <EntitySet Name="app" EntityType="pmsModel.app" />
+    <EntitySet Name="group" EntityType="pmsModel.group" />
+    <EntitySet Name="grouprole" EntityType="pmsModel.grouprole" />
+    <EntitySet Name="groupuser" EntityType="pmsModel.groupuser" />
+    <EntitySet Name="role" EntityType="pmsModel.role" />
+    <EntitySet Name="roleaction" EntityType="pmsModel.roleaction" />
+    <EntitySet Name="roleactionresource" EntityType="pmsModel.roleactionresource" />
+    <EntitySet Name="structure" EntityType="pmsModel.structure" />
+    <EntitySet Name="user" EntityType="pmsModel.user" />
+    <EntitySet Name="userrole" EntityType="pmsModel.userrole" />
+    <AssociationSet Name="action_ibfk_1" Association="pmsModel.action_ibfk_1">
+      <End Role="app" EntitySet="app" />
+      <End Role="action" EntitySet="action" />
+    </AssociationSet>
+    <AssociationSet Name="action_ibfk_2" Association="pmsModel.action_ibfk_2">
+      <End Role="structure" EntitySet="structure" />
+      <End Role="action" EntitySet="action" />
+    </AssociationSet>
+    <AssociationSet Name="actiongroupdetail_ibfk_1" Association="pmsModel.actiongroupdetail_ibfk_1">
+      <End Role="action" EntitySet="action" />
+      <End Role="actiongroupdetail" EntitySet="actiongroupdetail" />
+    </AssociationSet>
+    <AssociationSet Name="roleaction_ibfk_1" Association="pmsModel.roleaction_ibfk_1">
+      <End Role="action" EntitySet="action" />
+      <End Role="roleaction" EntitySet="roleaction" />
+    </AssociationSet>
+    <AssociationSet Name="actiongroup_ibfk_1" Association="pmsModel.actiongroup_ibfk_1">
+      <End Role="app" EntitySet="app" />
+      <End Role="actiongroup" EntitySet="actiongroup" />
+    </AssociationSet>
+    <AssociationSet Name="actiongroupdetail_ibfk_2" Association="pmsModel.actiongroupdetail_ibfk_2">
+      <End Role="actiongroup" EntitySet="actiongroup" />
+      <End Role="actiongroupdetail" EntitySet="actiongroupdetail" />
+    </AssociationSet>
+    <AssociationSet Name="role_ibfk_2" Association="pmsModel.role_ibfk_2">
+      <End Role="actiongroup" EntitySet="actiongroup" />
+      <End Role="role" EntitySet="role" />
+    </AssociationSet>
+    <AssociationSet Name="group_ibfk_1" Association="pmsModel.group_ibfk_1">
+      <End Role="app" EntitySet="app" />
+      <End Role="group" EntitySet="group" />
+    </AssociationSet>
+    <AssociationSet Name="role_ibfk_1" Association="pmsModel.role_ibfk_1">
+      <End Role="app" EntitySet="app" />
+      <End Role="role" EntitySet="role" />
+    </AssociationSet>
+    <AssociationSet Name="structure_ibfk_1" Association="pmsModel.structure_ibfk_1">
+      <End Role="app" EntitySet="app" />
+      <End Role="structure" EntitySet="structure" />
+    </AssociationSet>
+    <AssociationSet Name="user_ibfk_1" Association="pmsModel.user_ibfk_1">
+      <End Role="app" EntitySet="app" />
+      <End Role="user" EntitySet="user" />
+    </AssociationSet>
+    <AssociationSet Name="grouprole_ibfk_2" Association="pmsModel.grouprole_ibfk_2">
+      <End Role="group" EntitySet="group" />
+      <End Role="grouprole" EntitySet="grouprole" />
+    </AssociationSet>
+    <AssociationSet Name="groupuser_ibfk_2" Association="pmsModel.groupuser_ibfk_2">
+      <End Role="group" EntitySet="group" />
+      <End Role="groupuser" EntitySet="groupuser" />
+    </AssociationSet>
+    <AssociationSet Name="grouprole_ibfk_1" Association="pmsModel.grouprole_ibfk_1">
+      <End Role="role" EntitySet="role" />
+      <End Role="grouprole" EntitySet="grouprole" />
+    </AssociationSet>
+    <AssociationSet Name="groupuser_ibfk_1" Association="pmsModel.groupuser_ibfk_1">
+      <End Role="user" EntitySet="user" />
+      <End Role="groupuser" EntitySet="groupuser" />
+    </AssociationSet>
+    <AssociationSet Name="roleaction_ibfk_2" Association="pmsModel.roleaction_ibfk_2">
+      <End Role="role" EntitySet="role" />
+      <End Role="roleaction" EntitySet="roleaction" />
+    </AssociationSet>
+    <AssociationSet Name="roleactionresource_ibfk_1" Association="pmsModel.roleactionresource_ibfk_1">
+      <End Role="role" EntitySet="role" />
+      <End Role="roleactionresource" EntitySet="roleactionresource" />
+    </AssociationSet>
+    <AssociationSet Name="userrole_ibfk_1" Association="pmsModel.userrole_ibfk_1">
+      <End Role="role" EntitySet="role" />
+      <End Role="userrole" EntitySet="userrole" />
+    </AssociationSet>
+    <AssociationSet Name="userrole_ibfk_2" Association="pmsModel.userrole_ibfk_2">
+      <End Role="user" EntitySet="user" />
+      <End Role="userrole" EntitySet="userrole" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="action">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+    <Property Name="StructureId" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="app" Relationship="pmsModel.action_ibfk_1" FromRole="action" ToRole="app" />
+    <NavigationProperty Name="structure" Relationship="pmsModel.action_ibfk_2" FromRole="action" ToRole="structure" />
+    <NavigationProperty Name="actiongroupdetail" Relationship="pmsModel.actiongroupdetail_ibfk_1" FromRole="action" ToRole="actiongroupdetail" />
+    <NavigationProperty Name="roleaction" Relationship="pmsModel.roleaction_ibfk_1" FromRole="action" ToRole="roleaction" />
+  </EntityType>
+  <EntityType Name="actiongroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="app" Relationship="pmsModel.actiongroup_ibfk_1" FromRole="actiongroup" ToRole="app" />
+    <NavigationProperty Name="actiongroupdetail" Relationship="pmsModel.actiongroupdetail_ibfk_2" FromRole="actiongroup" ToRole="actiongroupdetail" />
+    <NavigationProperty Name="role" Relationship="pmsModel.role_ibfk_2" FromRole="actiongroup" ToRole="role" />
+  </EntityType>
+  <EntityType Name="actiongroupdetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActionGroupId" Type="Int32" Nullable="false" />
+    <Property Name="ActionId" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="action" Relationship="pmsModel.actiongroupdetail_ibfk_1" FromRole="actiongroupdetail" ToRole="action" />
+    <NavigationProperty Name="actiongroup" Relationship="pmsModel.actiongroupdetail_ibfk_2" FromRole="actiongroupdetail" ToRole="actiongroup" />
+  </EntityType>
+  <EntityType Name="app">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="ResourceServiceUrl" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="EnableSingleActionResource" Type="Boolean" Nullable="false" />
+    <Property Name="EnableUserManagement" Type="Boolean" Nullable="false" />
+    <Property Name="EnablePermissionManagement" Type="Boolean" Nullable="false" />
+    <Property Name="EnableAccountManagement" Type="Boolean" Nullable="false" />
+    <Property Name="EnableGroupManagement" Type="Boolean" Nullable="false" />
+    <Property Name="EnableRoleManagement" Type="Boolean" Nullable="false" />
+    <Property Name="EnableActionManagement" Type="Boolean" Nullable="false" />
+    <Property Name="EnableStructureManagement" Type="Boolean" Nullable="false" />
+    <Property Name="EnableActionGroupManagement" Type="Boolean" Nullable="false" />
+    <Property Name="EnabledEmailUnique" Type="Boolean" Nullable="false" />
+    <Property Name="EnableResourceById" Type="Boolean" Nullable="false" />
+    <Property Name="EnableResourceByUser" Type="Boolean" Nullable="false" />
+    <Property Name="EnableResourceByGroup" Type="Boolean" Nullable="false" />
+    <Property Name="MonitorMailServer" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="MonitorMailPort" Type="Int32" Nullable="false" />
+    <Property Name="MonitorMailUserName" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="MonitorMailPassword" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="MonitorMailFrom" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="MonitorMailTo" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="MailSubject" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="MailContentLoginHref" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="MailContentSystemName" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreatedTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="action" Relationship="pmsModel.action_ibfk_1" FromRole="app" ToRole="action" />
+    <NavigationProperty Name="actiongroup" Relationship="pmsModel.actiongroup_ibfk_1" FromRole="app" ToRole="actiongroup" />
+    <NavigationProperty Name="group" Relationship="pmsModel.group_ibfk_1" FromRole="app" ToRole="group" />
+    <NavigationProperty Name="role" Relationship="pmsModel.role_ibfk_1" FromRole="app" ToRole="role" />
+    <NavigationProperty Name="structure" Relationship="pmsModel.structure_ibfk_1" FromRole="app" ToRole="structure" />
+    <NavigationProperty Name="user" Relationship="pmsModel.user_ibfk_1" FromRole="app" ToRole="user" />
+  </EntityType>
+  <EntityType Name="group">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+    <Property Name="Pid" Type="Int32" />
+    <Property Name="Status" Type="SByte" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="app" Relationship="pmsModel.group_ibfk_1" FromRole="group" ToRole="app" />
+    <NavigationProperty Name="grouprole" Relationship="pmsModel.grouprole_ibfk_2" FromRole="group" ToRole="grouprole" />
+    <NavigationProperty Name="groupuser" Relationship="pmsModel.groupuser_ibfk_2" FromRole="group" ToRole="groupuser" />
+  </EntityType>
+  <EntityType Name="grouprole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="group" Relationship="pmsModel.grouprole_ibfk_2" FromRole="grouprole" ToRole="group" />
+    <NavigationProperty Name="role" Relationship="pmsModel.grouprole_ibfk_1" FromRole="grouprole" ToRole="role" />
+  </EntityType>
+  <EntityType Name="groupuser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="group" Relationship="pmsModel.groupuser_ibfk_2" FromRole="groupuser" ToRole="group" />
+    <NavigationProperty Name="user" Relationship="pmsModel.groupuser_ibfk_1" FromRole="groupuser" ToRole="user" />
+  </EntityType>
+  <EntityType Name="role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="ActionGroupId" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="actiongroup" Relationship="pmsModel.role_ibfk_2" FromRole="role" ToRole="actiongroup" />
+    <NavigationProperty Name="app" Relationship="pmsModel.role_ibfk_1" FromRole="role" ToRole="app" />
+    <NavigationProperty Name="grouprole" Relationship="pmsModel.grouprole_ibfk_1" FromRole="role" ToRole="grouprole" />
+    <NavigationProperty Name="roleaction" Relationship="pmsModel.roleaction_ibfk_2" FromRole="role" ToRole="roleaction" />
+    <NavigationProperty Name="roleactionresource" Relationship="pmsModel.roleactionresource_ibfk_1" FromRole="role" ToRole="roleactionresource" />
+    <NavigationProperty Name="userrole" Relationship="pmsModel.userrole_ibfk_1" FromRole="role" ToRole="userrole" />
+  </EntityType>
+  <EntityType Name="roleaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="ActionId" Type="Int32" Nullable="false" />
+    <Property Name="IsContainSelf" Type="Boolean" Nullable="false" />
+    <Property Name="IsContainAllChilds" Type="Boolean" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="action" Relationship="pmsModel.roleaction_ibfk_1" FromRole="roleaction" ToRole="action" />
+    <NavigationProperty Name="role" Relationship="pmsModel.roleaction_ibfk_2" FromRole="roleaction" ToRole="role" />
+  </EntityType>
+  <EntityType Name="roleactionresource">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleActionId" Type="Int32" Nullable="false" />
+    <Property Name="ResourcePattern" Type="Int32" Nullable="false" />
+    <Property Name="ResourceId" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="role" Relationship="pmsModel.roleactionresource_ibfk_1" FromRole="roleactionresource" ToRole="role" />
+  </EntityType>
+  <EntityType Name="structure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Pid" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="action" Relationship="pmsModel.action_ibfk_2" FromRole="structure" ToRole="action" />
+    <NavigationProperty Name="app" Relationship="pmsModel.structure_ibfk_1" FromRole="structure" ToRole="app" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppId" Type="Int32" Nullable="false" />
+    <Property Name="Account" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" />
+    <Property Name="ChineseName" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="EnglishName" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="PinyinName" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="EmployeeId" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+    <Property Name="Cellphone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Telephone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IsFromAD" Type="Boolean" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="app" Relationship="pmsModel.user_ibfk_1" FromRole="user" ToRole="app" />
+    <NavigationProperty Name="groupuser" Relationship="pmsModel.groupuser_ibfk_1" FromRole="user" ToRole="groupuser" />
+    <NavigationProperty Name="userrole" Relationship="pmsModel.userrole_ibfk_2" FromRole="user" ToRole="userrole" />
+  </EntityType>
+  <EntityType Name="userrole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+    <Property Name="LastChanged" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="role" Relationship="pmsModel.userrole_ibfk_1" FromRole="userrole" ToRole="role" />
+    <NavigationProperty Name="user" Relationship="pmsModel.userrole_ibfk_2" FromRole="userrole" ToRole="user" />
+  </EntityType>
+  <Association Name="action_ibfk_1">
+    <End Role="app" Type="pmsModel.app" Multiplicity="1" />
+    <End Role="action" Type="pmsModel.action" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="app">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="action">
+        <PropertyRef Name="AppId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="action_ibfk_2">
+    <End Role="structure" Type="pmsModel.structure" Multiplicity="1" />
+    <End Role="action" Type="pmsModel.action" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="structure">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="action">
+        <PropertyRef Name="StructureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="actiongroupdetail_ibfk_1">
+    <End Role="action" Type="pmsModel.action" Multiplicity="1" />
+    <End Role="actiongroupdetail" Type="pmsModel.actiongroupdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="action">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="actiongroupdetail">
+        <PropertyRef Name="ActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="roleaction_ibfk_1">
+    <End Role="action" Type="pmsModel.action" Multiplicity="1" />
+    <End Role="roleaction" Type="pmsModel.roleaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="action">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="roleaction">
+        <PropertyRef Name="ActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="actiongroup_ibfk_1">
+    <End Role="app" Type="pmsModel.app" Multiplicity="1" />
+    <End Role="actiongroup" Type="pmsModel.actiongroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="app">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="actiongroup">
+        <PropertyRef Name="AppId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="actiongroupdetail_ibfk_2">
+    <End Role="actiongroup" Type="pmsModel.actiongroup" Multiplicity="1" />
+    <End Role="actiongroupdetail" Type="pmsModel.actiongroupdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="actiongroup">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="actiongroupdetail">
+        <PropertyRef Name="ActionGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="role_ibfk_2">
+    <End Role="actiongroup" Type="pmsModel.actiongroup" Multiplicity="0..1" />
+    <End Role="role" Type="pmsModel.role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="actiongroup">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="role">
+        <PropertyRef Name="ActionGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="group_ibfk_1">
+    <End Role="app" Type="pmsModel.app" Multiplicity="1" />
+    <End Role="group" Type="pmsModel.group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="app">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="group">
+        <PropertyRef Name="AppId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="role_ibfk_1">
+    <End Role="app" Type="pmsModel.app" Multiplicity="1" />
+    <End Role="role" Type="pmsModel.role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="app">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="role">
+        <PropertyRef Name="AppId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="structure_ibfk_1">
+    <End Role="app" Type="pmsModel.app" Multiplicity="1" />
+    <End Role="structure" Type="pmsModel.structure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="app">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="structure">
+        <PropertyRef Name="AppId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="user_ibfk_1">
+    <End Role="app" Type="pmsModel.app" Multiplicity="1" />
+    <End Role="user" Type="pmsModel.user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="app">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="user">
+        <PropertyRef Name="AppId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="grouprole_ibfk_2">
+    <End Role="group" Type="pmsModel.group" Multiplicity="1" />
+    <End Role="grouprole" Type="pmsModel.grouprole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="group">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="grouprole">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="groupuser_ibfk_2">
+    <End Role="group" Type="pmsModel.group" Multiplicity="1" />
+    <End Role="groupuser" Type="pmsModel.groupuser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="group">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="groupuser">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="grouprole_ibfk_1">
+    <End Role="role" Type="pmsModel.role" Multiplicity="1" />
+    <End Role="grouprole" Type="pmsModel.grouprole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="grouprole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="groupuser_ibfk_1">
+    <End Role="user" Type="pmsModel.user" Multiplicity="1" />
+    <End Role="groupuser" Type="pmsModel.groupuser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="groupuser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="roleaction_ibfk_2">
+    <End Role="role" Type="pmsModel.role" Multiplicity="1" />
+    <End Role="roleaction" Type="pmsModel.roleaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="roleaction">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="roleactionresource_ibfk_1">
+    <End Role="role" Type="pmsModel.role" Multiplicity="1" />
+    <End Role="roleactionresource" Type="pmsModel.roleactionresource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="roleactionresource">
+        <PropertyRef Name="RoleActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="userrole_ibfk_1">
+    <End Role="role" Type="pmsModel.role" Multiplicity="1" />
+    <End Role="userrole" Type="pmsModel.userrole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="role">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="userrole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="userrole_ibfk_2">
+    <End Role="user" Type="pmsModel.user" Multiplicity="1" />
+    <End Role="userrole" Type="pmsModel.userrole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="userrole">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="pmsModelStoreContainer" CdmEntityContainer="pmsEntities">
+    <EntitySetMapping Name="action">
+      <EntityTypeMapping TypeName="pmsModel.action">
+        <MappingFragment StoreEntitySet="action">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StructureId" ColumnName="StructureId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="actiongroup">
+      <EntityTypeMapping TypeName="pmsModel.actiongroup">
+        <MappingFragment StoreEntitySet="actiongroup">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="actiongroupdetail">
+      <EntityTypeMapping TypeName="pmsModel.actiongroupdetail">
+        <MappingFragment StoreEntitySet="actiongroupdetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ActionGroupId" ColumnName="ActionGroupId" />
+          <ScalarProperty Name="ActionId" ColumnName="ActionId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="app">
+      <EntityTypeMapping TypeName="pmsModel.app">
+        <MappingFragment StoreEntitySet="app">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ResourceServiceUrl" ColumnName="ResourceServiceUrl" />
+          <ScalarProperty Name="EnableSingleActionResource" ColumnName="EnableSingleActionResource" />
+          <ScalarProperty Name="EnableUserManagement" ColumnName="EnableUserManagement" />
+          <ScalarProperty Name="EnablePermissionManagement" ColumnName="EnablePermissionManagement" />
+          <ScalarProperty Name="EnableAccountManagement" ColumnName="EnableAccountManagement" />
+          <ScalarProperty Name="EnableGroupManagement" ColumnName="EnableGroupManagement" />
+          <ScalarProperty Name="EnableRoleManagement" ColumnName="EnableRoleManagement" />
+          <ScalarProperty Name="EnableActionManagement" ColumnName="EnableActionManagement" />
+          <ScalarProperty Name="EnableStructureManagement" ColumnName="EnableStructureManagement" />
+          <ScalarProperty Name="EnableActionGroupManagement" ColumnName="EnableActionGroupManagement" />
+          <ScalarProperty Name="EnabledEmailUnique" ColumnName="EnabledEmailUnique" />
+          <ScalarProperty Name="EnableResourceById" ColumnName="EnableResourceById" />
+          <ScalarProperty Name="EnableResourceByUser" ColumnName="EnableResourceByUser" />
+          <ScalarProperty Name="EnableResourceByGroup" ColumnName="EnableResourceByGroup" />
+          <ScalarProperty Name="MonitorMailServer" ColumnName="MonitorMailServer" />
+          <ScalarProperty Name="MonitorMailPort" ColumnName="MonitorMailPort" />
+          <ScalarProperty Name="MonitorMailUserName" ColumnName="MonitorMailUserName" />
+          <ScalarProperty Name="MonitorMailPassword" ColumnName="MonitorMailPassword" />
+          <ScalarProperty Name="MonitorMailFrom" ColumnName="MonitorMailFrom" />
+          <ScalarProperty Name="MonitorMailTo" ColumnName="MonitorMailTo" />
+          <ScalarProperty Name="MailSubject" ColumnName="MailSubject" />
+          <ScalarProperty Name="MailContentLoginHref" ColumnName="MailContentLoginHref" />
+          <ScalarProperty Name="MailContentSystemName" ColumnName="MailContentSystemName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group">
+      <EntityTypeMapping TypeName="pmsModel.group">
+        <MappingFragment StoreEntitySet="group">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="grouprole">
+      <EntityTypeMapping TypeName="pmsModel.grouprole">
+        <MappingFragment StoreEntitySet="grouprole">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="groupuser">
+      <EntityTypeMapping TypeName="pmsModel.groupuser">
+        <MappingFragment StoreEntitySet="groupuser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="role">
+      <EntityTypeMapping TypeName="pmsModel.role">
+        <MappingFragment StoreEntitySet="role">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ActionGroupId" ColumnName="ActionGroupId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roleaction">
+      <EntityTypeMapping TypeName="pmsModel.roleaction">
+        <MappingFragment StoreEntitySet="roleaction">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ActionId" ColumnName="ActionId" />
+          <ScalarProperty Name="IsContainSelf" ColumnName="IsContainSelf" />
+          <ScalarProperty Name="IsContainAllChilds" ColumnName="IsContainAllChilds" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roleactionresource">
+      <EntityTypeMapping TypeName="pmsModel.roleactionresource">
+        <MappingFragment StoreEntitySet="roleactionresource">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleActionId" ColumnName="RoleActionId" />
+          <ScalarProperty Name="ResourcePattern" ColumnName="ResourcePattern" />
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="structure">
+      <EntityTypeMapping TypeName="pmsModel.structure">
+        <MappingFragment StoreEntitySet="structure">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="pmsModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="ChineseName" ColumnName="ChineseName" />
+          <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+          <ScalarProperty Name="PinyinName" ColumnName="PinyinName" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Cellphone" ColumnName="Cellphone" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="IsFromAD" ColumnName="IsFromAD" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userrole">
+      <EntityTypeMapping TypeName="pmsModel.userrole">
+        <MappingFragment StoreEntitySet="userrole">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastChanged" ColumnName="LastChanged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

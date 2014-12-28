@@ -1,0 +1,18 @@
+<chart caption='印象数' bgColor='F7F7F7, E9E9E9' numVDivLines='10' divLineAlpha='30' labelPadding ='10' yAxisValuesPadding ='10' showValues='1' rotateValues='0'  valuePosition='Below' canvaspadding='10' showBorder="0" formatNumberScale='0' >
+  <categories>
+    <category label='2012-11-05' />
+    <category label='2012-11-06' />
+    <category label='2012-11-07' />
+    <category label='2012-11-08' />
+    <category label='2012-11-09' />
+    <category label='2012-11-10' />
+  </categories>
+  <dataset seriesName='印象数' color='A66EDD' >
+    <set value='10000' />
+    <set value='21000' />
+    <set value='25000' />
+    <set value='32000' />
+    <set value='35000' />
+    <set value='36000' />
+  </dataset>
+</chart>

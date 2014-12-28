@@ -1,0 +1,12 @@
+<chart caption='网站浏览量' bgColor='F7F7F7, E9E9E9' numVDivLines='10' divLineAlpha='30' labelPadding ='10' yAxisValuesPadding ='10' showValues='1' rotateValues='0'  valuePosition='Below' canvaspadding='10' showBorder="0" formatNumberScale='0' >
+  <categories>
+    <category label='2012-10-29' />
+    <category label='2012-10-30' />
+    <category label='2012-10-31' />
+  </categories>
+  <dataset seriesName='网站浏览量' color='A66EDD' >
+    <set value='1000' />
+    <set value='2500' />
+    <set value='2100' />
+  </dataset>
+</chart>

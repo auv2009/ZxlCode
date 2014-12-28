@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Fusion Charts Demo";
+}
+<script src="@Url.Content("~/Plugins/FusionCharts/FusionCharts.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Plugins/FusionCharts/FusionCharts.jqueryplugin.js")" type="text/javascript"></script>
+
+<h2>Fusion Charts Demo</h2>
+
+<p>
+    Fusion Charts Demo
+</p>
+
+<table id="tbl_chart">
+    <tr>
+        <td><div id="Column3D_Div"></div></td>
+        <td><div id="Pie3D_Div"></div></td>
+    </tr>
+    <tr>
+        <td><div id="MSColumn3D_Div"></div></td>
+        <td><div id="StackedColumn3D_Div"></div></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+    
+    var column3D = new FusionCharts("/Plugins/FusionCharts/swf/Column3D.swf", "myChartId1", "400", "300", "0", "1");
+    column3D.setXMLUrl("/Plugins/FusionCharts/xml/Data.xml");
+    column3D.render("Column3D_Div");
+
+    var pie3D = new FusionCharts("/Plugins/FusionCharts/swf/Pie3D.swf", "myChartId2", "500", "400", "0", "1");
+    pie3D.setXMLUrl("/Plugins/FusionCharts/xml/Data.xml");
+    pie3D.render("Pie3D_Div");
+
+    var msColumn3D = new FusionCharts("/Plugins/FusionCharts/swf/MSColumn3D.swf", "myChartId3", "400", "300", "0", "1");
+    msColumn3D.setXMLUrl("/Plugins/FusionCharts/xml/MSColumn3D.xml");
+    msColumn3D.render("MSColumn3D_Div");
+
+    var stackedColumn3D = new FusionCharts("/Plugins/FusionCharts/swf/StackedColumn3D.swf", "myChartId4", "400", "300", "0", "1");
+    stackedColumn3D.setXMLUrl("/Plugins/FusionCharts/xml/MSColumn3D.xml");
+    stackedColumn3D.render("StackedColumn3D_Div");
+    
+    
+    // 第2种方式：
+    // FusionCharts.render(swf_path, chartId, width, height, divId, data_path)
+    //FusionCharts.render("/Plugins/FusionCharts/swf/Column3D.swf","myChartId", "400", "300","Column3D","/Plugins/FusionCharts/xml/Data.xml");
+
+    // 第3种方式：
+//    var myChart = new FusionCharts({
+//        swfUrl: '/Plugins/FusionCharts/swf/Column3D.swf',
+//        width: '400',
+//        height: '300',
+//        debugMode: false
+//    });
+//    myChart.setXMLUrl("/Plugins/FusionCharts/xml/Data.xml");
+//    myChart.render("Column3D");
+</script>

@@ -1,0 +1,120 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assemblies", "Assemblies", "{11C629C2-500A-402A-A46B-0666ED255052}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JsonNet", "JsonNet", "{22D34225-5564-4934-B038-8A1786114CB6}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\JsonNet\Newtonsoft.Json.dll = Assemblies\JsonNet\Newtonsoft.Json.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Log4Net", "Log4Net", "{3A2185CA-2F9D-4317-90F0-2D465C0E49CF}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\Log4Net\log4net.dll = Assemblies\Log4Net\log4net.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC3", "MVC3", "{64BA4307-0007-446C-95CB-31D4EF8205AC}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\MVC3\Microsoft.Web.Infrastructure.dll = Assemblies\MVC3\Microsoft.Web.Infrastructure.dll
+		Assemblies\MVC3\NuGet.Core.dll = Assemblies\MVC3\NuGet.Core.dll
+		Assemblies\MVC3\System.ComponentModel.DataAnnotations.resources.dll = Assemblies\MVC3\System.ComponentModel.DataAnnotations.resources.dll
+		Assemblies\MVC3\System.Web.Helpers.dll = Assemblies\MVC3\System.Web.Helpers.dll
+		Assemblies\MVC3\System.Web.Mvc.dll = Assemblies\MVC3\System.Web.Mvc.dll
+		Assemblies\MVC3\System.Web.Razor.dll = Assemblies\MVC3\System.Web.Razor.dll
+		Assemblies\MVC3\System.Web.WebPages.Administration.dll = Assemblies\MVC3\System.Web.WebPages.Administration.dll
+		Assemblies\MVC3\System.Web.WebPages.Deployment.dll = Assemblies\MVC3\System.Web.WebPages.Deployment.dll
+		Assemblies\MVC3\System.Web.WebPages.dll = Assemblies\MVC3\System.Web.WebPages.dll
+		Assemblies\MVC3\System.Web.WebPages.Razor.dll = Assemblies\MVC3\System.Web.WebPages.Razor.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MySql", "MySql", "{A28CCC17-537E-4FD3-A976-FFE202B758C1}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\MySql\MySql.Data.dll = Assemblies\MySql\MySql.Data.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQLite", "SQLite", "{DFE5C2E5-F41A-40B1-9B48-B56B3D3BD865}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\SQLite\System.Data.SQLite.dll = Assemblies\SQLite\System.Data.SQLite.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NPOI", "NPOI", "{319F4040-E72B-4624-80F6-3A95570AE87B}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\NPOI\dotnet4\ICSharpCode.SharpZipLib.dll = Assemblies\NPOI\dotnet4\ICSharpCode.SharpZipLib.dll
+		Assemblies\NPOI\dotnet4\NPOI.dll = Assemblies\NPOI\dotnet4\NPOI.dll
+		Assemblies\NPOI\dotnet4\NPOI.OOXML.dll = Assemblies\NPOI\dotnet4\NPOI.OOXML.dll
+		Assemblies\NPOI\dotnet4\NPOI.OOXML.XML = Assemblies\NPOI\dotnet4\NPOI.OOXML.XML
+		Assemblies\NPOI\dotnet4\NPOI.OpenXml4Net.dll = Assemblies\NPOI\dotnet4\NPOI.OpenXml4Net.dll
+		Assemblies\NPOI\dotnet4\NPOI.OpenXml4Net.XML = Assemblies\NPOI\dotnet4\NPOI.OpenXml4Net.XML
+		Assemblies\NPOI\dotnet4\NPOI.OpenXmlFormats.dll = Assemblies\NPOI\dotnet4\NPOI.OpenXmlFormats.dll
+		Assemblies\NPOI\dotnet4\NPOI.XML = Assemblies\NPOI\dotnet4\NPOI.XML
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HtmlAgilityPack", "HtmlAgilityPack", "{F55F10F8-B4F8-499F-AC46-84567F7A8686}"
+	ProjectSection(SolutionItems) = preProject
+		Assemblies\HtmlAgilityPack\Net40\HtmlAgilityPack.dll = Assemblies\HtmlAgilityPack\Net40\HtmlAgilityPack.dll
+		Assemblies\HtmlAgilityPack\Net40\HtmlAgilityPack.pdb = Assemblies\HtmlAgilityPack\Net40\HtmlAgilityPack.pdb
+		Assemblies\HtmlAgilityPack\Net40\HtmlAgilityPack.XML = Assemblies\HtmlAgilityPack\Net40\HtmlAgilityPack.XML
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zxl.CSharpLib", "Zxl.CSharpLib\Zxl.CSharpLib.csproj", "{8DEA4AA2-8917-431E-A7DC-C9DD4ED238DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zxl.MvcPro", "Zxl.MvcPro\Zxl.MvcPro.csproj", "{34CE0DE5-36C1-4DD6-82A5-779ACB42CBFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zxl.ConsolePro", "Zxl.ConsolePro\Zxl.ConsolePro.csproj", "{23DDF6FB-210C-42A9-8D92-61BDB572DCCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DEA4AA2-8917-431E-A7DC-C9DD4ED238DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DEA4AA2-8917-431E-A7DC-C9DD4ED238DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DEA4AA2-8917-431E-A7DC-C9DD4ED238DD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8DEA4AA2-8917-431E-A7DC-C9DD4ED238DD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8DEA4AA2-8917-431E-A7DC-C9DD4ED238DD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8DEA4AA2-8917-431E-A7DC-C9DD4ED238DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DEA4AA2-8917-431E-A7DC-C9DD4ED238DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DEA4AA2-8917-431E-A7DC-C9DD4ED238DD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8DEA4AA2-8917-431E-A7DC-C9DD4ED238DD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8DEA4AA2-8917-431E-A7DC-C9DD4ED238DD}.Release|x86.ActiveCfg = Release|Any CPU
+		{34CE0DE5-36C1-4DD6-82A5-779ACB42CBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34CE0DE5-36C1-4DD6-82A5-779ACB42CBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34CE0DE5-36C1-4DD6-82A5-779ACB42CBFA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{34CE0DE5-36C1-4DD6-82A5-779ACB42CBFA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{34CE0DE5-36C1-4DD6-82A5-779ACB42CBFA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{34CE0DE5-36C1-4DD6-82A5-779ACB42CBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34CE0DE5-36C1-4DD6-82A5-779ACB42CBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34CE0DE5-36C1-4DD6-82A5-779ACB42CBFA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{34CE0DE5-36C1-4DD6-82A5-779ACB42CBFA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{34CE0DE5-36C1-4DD6-82A5-779ACB42CBFA}.Release|x86.ActiveCfg = Release|Any CPU
+		{23DDF6FB-210C-42A9-8D92-61BDB572DCCA}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{23DDF6FB-210C-42A9-8D92-61BDB572DCCA}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{23DDF6FB-210C-42A9-8D92-61BDB572DCCA}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{23DDF6FB-210C-42A9-8D92-61BDB572DCCA}.Debug|x86.ActiveCfg = Debug|x86
+		{23DDF6FB-210C-42A9-8D92-61BDB572DCCA}.Debug|x86.Build.0 = Debug|x86
+		{23DDF6FB-210C-42A9-8D92-61BDB572DCCA}.Release|Any CPU.ActiveCfg = Release|x86
+		{23DDF6FB-210C-42A9-8D92-61BDB572DCCA}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{23DDF6FB-210C-42A9-8D92-61BDB572DCCA}.Release|Mixed Platforms.Build.0 = Release|x86
+		{23DDF6FB-210C-42A9-8D92-61BDB572DCCA}.Release|x86.ActiveCfg = Release|x86
+		{23DDF6FB-210C-42A9-8D92-61BDB572DCCA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{22D34225-5564-4934-B038-8A1786114CB6} = {11C629C2-500A-402A-A46B-0666ED255052}
+		{3A2185CA-2F9D-4317-90F0-2D465C0E49CF} = {11C629C2-500A-402A-A46B-0666ED255052}
+		{64BA4307-0007-446C-95CB-31D4EF8205AC} = {11C629C2-500A-402A-A46B-0666ED255052}
+		{A28CCC17-537E-4FD3-A976-FFE202B758C1} = {11C629C2-500A-402A-A46B-0666ED255052}
+		{DFE5C2E5-F41A-40B1-9B48-B56B3D3BD865} = {11C629C2-500A-402A-A46B-0666ED255052}
+		{319F4040-E72B-4624-80F6-3A95570AE87B} = {11C629C2-500A-402A-A46B-0666ED255052}
+		{F55F10F8-B4F8-499F-AC46-84567F7A8686} = {11C629C2-500A-402A-A46B-0666ED255052}
+	EndGlobalSection
+EndGlobal
