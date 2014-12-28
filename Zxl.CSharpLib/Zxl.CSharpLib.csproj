@@ -92,9 +92,7 @@
     <Compile Include="StringUtil.cs" />
     <Compile Include="Xml\XmlUtil.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="_config\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Assembly\EPPlus.dll" />
     <Content Include="Assembly\EPPlus.XML" />
